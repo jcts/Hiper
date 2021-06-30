@@ -5,7 +5,6 @@ namespace Hiper.Domain.Entities
     /// <summary>
     /// Classe para representação de Produto
     /// </summary>
-    [Table("Products")]
     public sealed class Product : EntityBase
     {
         public string Name { get; set; }

@@ -1,13 +1,14 @@
 ﻿using Hiper.Application.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Hiper.Application.Models;
+using Hiper.SharedKernel.Contexts;
 
 namespace Hiper.Application
 {
-    public class CustomerApp : ICustomerApp
+    public class CustomerApp : BaseApp<CustomerModel> , ICustomerApp
     {
+        public CustomerApp(CommonContext commonContext) : base(commonContext)
+        {
+
+        }
     }
 }

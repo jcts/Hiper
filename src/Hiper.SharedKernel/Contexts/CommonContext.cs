@@ -1,11 +1,12 @@
 ﻿using Hiper.Domain.Entities;
+using Hiper.SharedKernel.EntityConigurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hiper.SharedKernel.Contexts
 {
     public sealed class CommonContext : DbContext
     {
-        public DbSet<Customer> Orders { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         public CommonContext(DbContextOptions<CommonContext> options) : base(options)
         { }
@@ -17,8 +18,7 @@ namespace Hiper.SharedKernel.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Customer>();
-
+            modelBuilder.ApplyConfiguration(new CustomerConfig());
             base.OnModelCreating(modelBuilder);
         }
 

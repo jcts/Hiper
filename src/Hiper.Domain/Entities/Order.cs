@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hiper.Domain.Entities
 {
     /// <summary>
     /// Classe para representação de Pedido
     /// </summary>
-    [Table("Orders")]
+    
     public class Order : EntityBase
     {
         public ICollection<Product> Itens { get; set; }
@@ -15,7 +14,7 @@ namespace Hiper.Domain.Entities
         public DateTime EndDate { get; set; }
         public decimal Ammount { get; set; }
 
-        [ForeignKey("CustomerId")]
+        public virtual Guid CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
     }
 }

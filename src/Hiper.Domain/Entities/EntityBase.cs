@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hiper.Domain.Entities
 {
@@ -12,8 +10,6 @@ namespace Hiper.Domain.Entities
     {
         protected virtual object Actual => this;
 
-        [Key]
-        [Column("Id")]
         public Guid Id { get; set; }
         public DateTime CreateOn { get; set; }
 

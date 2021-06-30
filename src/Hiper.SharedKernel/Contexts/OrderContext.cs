@@ -1,4 +1,5 @@
 ﻿using Hiper.Domain.Entities;
+using Hiper.SharedKernel.EntityConigurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hiper.SharedKernel.Contexts
@@ -17,7 +18,8 @@ namespace Hiper.SharedKernel.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Order>();
+            modelBuilder.ApplyConfiguration(new OrderConfig());
+            modelBuilder.ApplyConfiguration(new CustomerConfig());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Hiper.SharedKernel\Hiper.SharedKernel.csproj" />
+  </ItemGroup>
+
 </Project>
