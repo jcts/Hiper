@@ -1,0 +1,40 @@
+﻿@model ICollection<Hiper.Application.Models.CustomerModel>
+
+<table class="table table-striped" width="100%">
+
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Telefone</td>
+            <td>Cidade</td>
+            <td>Estado</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            if (Model != null)
+            {
+                foreach (var customer in Model)
+                {
+                    <tr>
+                        <td>@customer.FullName</td>
+                        <td>@customer.CompletePhone</td>
+                        <td>@customer.City</td>
+                        <td>@customer.State</td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td>
+                <a class="nav-link btn btn-info btn-sm col-sm-4 text-white" asp-area="" asp-controller="Customer" asp-action="Create">Criar Novo</a>
+            </td>
+           
+        </tr>
+    </tfoot>
+
+</table>

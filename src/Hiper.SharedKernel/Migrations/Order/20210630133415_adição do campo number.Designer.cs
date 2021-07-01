@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hiper.SharedKernel.Migrations.Order
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20210630124525_criação das tabelas no contexto ordercontext")]
-    partial class criaçãodastabelasnocontextoordercontext
+    [Migration("20210630133415_adição do campo number")]
+    partial class adiçãodocamponumber
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,6 +57,9 @@ namespace Hiper.SharedKernel.Migrations.Order
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsEnable")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Number")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

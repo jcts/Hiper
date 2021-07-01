@@ -1,4 +1,6 @@
-﻿using Hiper.Application.Contracts;
+﻿using AutoMapper;
+using Hiper.Application.Contracts;
+using Hiper.Domain.Entities;
 using Hiper.SharedKernel.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,17 +12,24 @@ namespace Hiper.Application
     {
         protected readonly CommonContext _commonContext;
         protected DbSet<T> _dbSet;
+        protected IMapper _mapper;
 
-        public BaseApp(CommonContext commonContext)
+        public BaseApp(CommonContext commonContext, IMapper mapper)
         {
             _commonContext = commonContext;
 
             _dbSet = _commonContext.Set<T>();
+
+            _mapper = mapper;
         }
 
         public void Create(T model)
         {
-            throw new NotImplementedException();
+            var entity = _mapper.Map<Customer>(model);
+
+            _commonContext.Add(entity);
+
+            _commonContext.SaveChanges();
         }
 
         public void Delete(T model)

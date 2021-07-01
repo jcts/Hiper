@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hiper.Crosscuting", "src\Hi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C0E7FC37-19DD-4FC9-8C2D-3A9DB9185AFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiper.WebApp", "src\Hiper.WebApp\Hiper.WebApp.csproj", "{7881575D-0A6C-4027-8016-7FDC2AD71C27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hiper.WebApp", "src\Hiper.WebApp\Hiper.WebApp.csproj", "{7881575D-0A6C-4027-8016-7FDC2AD71C27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{B2176A31-0906-48F8-8DF5-520DC1F85639}"
 	ProjectSection(SolutionItems) = preProject
@@ -29,9 +29,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiper.Wpf", "src\Hiper.Wpf\Hiper.Wpf.csproj", "{6CAE500D-98A8-45C7-B5AA-913C49BB6A14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiper.WebApi", "src\Hiper.WebApi\Hiper.WebApi.csproj", "{C823ABDF-484B-402D-8160-3633F3183052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hiper.WebApi", "src\Hiper.WebApi\Hiper.WebApi.csproj", "{C823ABDF-484B-402D-8160-3633F3183052}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiper.Application", "src\Hiper.Application\Hiper.Application.csproj", "{887DD39D-7090-465F-9E9E-3ED0E922198E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hiper.Application", "src\Hiper.Application\Hiper.Application.csproj", "{887DD39D-7090-465F-9E9E-3ED0E922198E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiper.Producer", "src\Hiper.Producer\Hiper.Producer.csproj", "{F9122A82-8DD4-4834-9237-734269C37040}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{887DD39D-7090-465F-9E9E-3ED0E922198E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{887DD39D-7090-465F-9E9E-3ED0E922198E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{887DD39D-7090-465F-9E9E-3ED0E922198E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9122A82-8DD4-4834-9237-734269C37040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9122A82-8DD4-4834-9237-734269C37040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9122A82-8DD4-4834-9237-734269C37040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9122A82-8DD4-4834-9237-734269C37040}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{6CAE500D-98A8-45C7-B5AA-913C49BB6A14} = {C0E7FC37-19DD-4FC9-8C2D-3A9DB9185AFD}
 		{C823ABDF-484B-402D-8160-3633F3183052} = {C1F9B289-97B4-4E0B-BEFF-EB25C3DE8A01}
 		{887DD39D-7090-465F-9E9E-3ED0E922198E} = {4833795E-05C1-43C7-B79E-0412500B8CA7}
+		{F9122A82-8DD4-4834-9237-734269C37040} = {C1F9B289-97B4-4E0B-BEFF-EB25C3DE8A01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B956D6EE-193C-41CF-A82D-B3F81636D5E2}

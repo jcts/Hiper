@@ -11,9 +11,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="5.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Hiper.Application\Hiper.Application.csproj" />
     <ProjectReference Include="..\Hiper.SharedKernel\Hiper.SharedKernel.csproj" />
   </ItemGroup>
 

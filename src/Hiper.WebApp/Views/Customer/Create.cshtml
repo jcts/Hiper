@@ -1,0 +1,31 @@
+﻿<h4>Criar novo Cliente</h4>
+
+<form method="post" id="form-register-customer">
+    <div class="form-group">
+        <label for="firstName">Nome</label>
+        <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" placeholder="Informe o primeiro Nome" required autocomplete="off">
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Sobrenome</label>
+        <input type="text" class="form-control form-control-sm" id="lastName" name="lastName" placeholder="Informe o Sobrenome" required autocomplete="off">
+    </div>
+
+    <div class="form-group">
+        <label for="city">Cidade</label>
+        <input type="text" class="form-control form-control-sm" id="city" name="city" placeholder="Informe a cidade" required autocomplete="off">
+    </div>
+
+    <div class="form-group">
+        <label for="state">Estado</label>
+        <input type="text" class="form-control form-control-sm" id="state" name="state" placeholder="Informe o Estado" required autocomplete="off">
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="text" class="form-control form-control-sm" id="phone" name="phone" placeholder="Informe o Telefone de contato" required autocomplete="off">
+    </div>
+
+    <button type="submit" asp-controller="Customer" asp-action="Create" class="btn btn-primary">Cadastrar</button>
+
+</form>

@@ -13,7 +13,7 @@ namespace Hiper.Domain.Entities
         public bool IsEnable { get; set; }
         public DateTime EndDate { get; set; }
         public decimal Ammount { get; set; }
-
+        public int Number { get; set; }
         public virtual Guid CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
     }

@@ -57,6 +57,9 @@ namespace Hiper.SharedKernel.Migrations.Order
                     b.Property<bool>("IsEnable")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("Number")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");

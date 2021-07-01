@@ -1,20 +1,18 @@
+using Hiper.Application;
 using Hiper.SharedKernel.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Hiper.WebApp
 {
-    public class Startup
+    public partial class Startup
     {
+        internal IServiceCollection _services;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,9 +23,15 @@ namespace Hiper.WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CommonContext>(options => options.UseSqlite(Configuration.GetConnectionString("SandBox")));
-            services.AddDbContext<ProductContext>(options => options.UseSqlite(Configuration.GetConnectionString("SandBox")));
-            services.AddDbContext<OrderContext>(options => options.UseSqlite(Configuration.GetConnectionString("SandBox")));
+            _services = services;
+
+            AddContexts();
+
+            AddAppScope();
+
+            var mapper = Mappers.Mappings.CreateMapper();
+
+            services.AddSingleton(mapper);
 
             services.AddControllersWithViews();
         }
